@@ -161,8 +161,19 @@ void RSATool::GenerateRSAkey(string& sRSAPubKey, string& sRSAPriKey, string User
 
 	sRSAPubKey = pub_key;
 	sRSAPriKey = pri_key;
+	string folderPath = "./public";
+	if (0 != access(folderPath.c_str(), 0))
+	{
+		// if this folder not exist, create a new one.
+		if (mkdir(folderPath.c_str()) == 0) { // 返回 0 表示创建成功，-1 表示失败
+			cout << "[Reaction]: Directory successfully created." << endl;
+		}
+		else {
+			cout << "[Error]: Directory can't created." << endl;
+		}
+	}
 
-	string folderPath = "./" + UserName;
+	folderPath = "./" + UserName;
 	if (0 != access(folderPath.c_str(), 0))
 	{
 		// if this folder not exist, create a new one.

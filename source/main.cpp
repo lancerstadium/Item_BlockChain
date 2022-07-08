@@ -7,13 +7,14 @@
 int main() {
     
     
-    
     // 生成新用户
-    User user1 = User("马云");
-    User user2 = User("刘强东");
+    User user1 = User("蠡湖大道1800");
+    User user2 = User("杰克");
     User user3 = User("马化腾");
 
+
     // 生成记录表
+    
     RecordList RL = RecordList();
     RecordList RL2 = RecordList();
     RecordList RL3 = RecordList();
@@ -48,8 +49,7 @@ int main() {
     BC.print();
 
     user1.info();
-    user2.info();
-    user3.info();
 
+    
     return 0;
 }

@@ -20,7 +20,7 @@ User::User()
 {
 	UserName = "None";
 	USD = 0;
-	_GenerateRSAkey();
+	_GenerateRSAkey();	// Éú³ÉÃÜÔ¿¶Ô
 	cout << "User " << UserName << " init. Welcome!" << endl;
 }
 
